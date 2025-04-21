@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    -webkit-font-smothing: antialiased;
+}
+
+#profiles-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    gap: 4px;
+    padding: 4px;
+    box-shadow: 1px 2px 5px #000;
+
+    button{
+        outline: none;
+        border-style: none;
+        position: relative;
+        z-index: 9;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: all 0.3s ease;
+        }
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+    button:hover .expand-icon{
+        opacity: 1;
+        visibility: visible;
+        height: 60px;
+        width: 60px;
+        font-size: 38px;
+        transform: translate(-50%, -50%);
+    }
+    .card:hover, .card::before{
+        background: rgba(0, 0, 0, 0.3);
+    }
+    .expand-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 58px;
+        color: #fff;
+        background: #048600;
+        height: 140px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        visibility: none;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+#profile-view{
+    width: 100%;
+    height: 100%;
+    .slide{
+        content: '';
+        position: absolute;
+        left: 0;
+        padding: 4px;
+        height: 50%;
+        width: 100%;
+        background: #048600;
+        z-index: 9999;
+        transition: all 0.5s ease;
+    }
+    #s1{
+        top: 0;
+        background-image: url("https://100dayscss.com/codepen/13-1-header.jpg");
+        background-size: cover;
+        background-position-y: 45%;
+        background-repeat: no-repeat;
+        transform: translateY(-100%);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    #s2{
+        bottom: 0;
+        transform: translateY(100%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #profile-overview{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
+        z-index: 99999;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            object-fit: cover;
+            padding: 1px;
+            background-repeat: no-repeat;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+    }
+    #profile-name{
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999;
+        font-weight: 600;
+        color: #fff;
+    }
+    #contact-icons{
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999;
+        display: flex;
+        gap: 30px;
+        div{
+            padding: 16px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover{
+                background: #fff;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            }
+            &:hover svg{
+                color: #048600;
+                z-index: 999999;
+            }
+        }
+
+        svg{
+            color: #fff;
+            width: 22px;
+            height: 22px;
+        }
+    }
+}
+
+#close-profile-view{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    svg{
+        color: #fff;
+        width: 28px;
+        height: 28px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            color: #048600;
+        }
+    }
+}
+
+.translate-actual{
+    transform: translateY(0) !important;
+}
+
+.scale-actual{
+    transform: scale(1) !important;
+}
