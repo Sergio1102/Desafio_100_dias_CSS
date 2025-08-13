@@ -1,0 +1,115 @@
+#frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #4c4ba2;
+}
+
+#dots{
+    padding-top: 28px;
+    padding-left: 194px;
+
+    .dot{
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 5px 0;
+    }
+}
+
+#d1{
+    animation: dot 1016ms ease-in-out infinite;
+}
+
+#d2{
+    animation: dot 1034ms ease-in-out infinite;
+}
+
+#d3{
+    animation: dot 1052ms ease-in-out infinite;
+}
+
+#d4{
+    animation: dot 1071ms ease-in-out infinite;
+}
+
+#d5{
+    animation: dot 1090ms ease-in-out infinite;
+}
+
+#d6{
+    animation: dot 1111ms ease-in-out infinite;
+}
+
+#d7{
+    animation: dot 1132ms ease-in-out infinite;
+}
+
+#d8{
+    animation: dot 1153ms ease-in-out infinite;
+}
+
+#d9{
+    animation: dot 1176ms ease-in-out infinite;
+}
+
+#d10{
+    animation: dot 1200ms ease-in-out infinite;
+}
+
+#d11{
+    animation: dot 1224ms ease-in-out infinite;
+}
+
+#d12{
+    animation: dot 1250ms ease-in-out infinite;
+}
+
+#d13{
+    animation: dot 1276ms ease-in-out infinite;
+}
+
+#d14{
+    animation: dot 1304ms ease-in-out infinite;
+}
+
+#d15{
+    animation: dot 1333ms ease-in-out infinite;
+}
+
+#d16{
+    animation: dot 1363ms ease-in-out infinite;
+}
+
+#d17{
+    animation: dot 1395ms ease-in-out infinite;
+}
+
+#d18{
+    animation: dot 1428ms ease-in-out infinite;
+}
+
+#d19{
+    animation: dot 1463ms ease-in-out infinite;
+}
+
+#d20{
+    animation: dot 1500ms ease-in-out infinite;
+}
+
+@keyframes dot{
+    0%, 100%{
+        transform: translate3d(50px, 0, 0);
+    }
+    50%{
+        transform: translate3d(-50px, 0, 0);
+    }
+}
